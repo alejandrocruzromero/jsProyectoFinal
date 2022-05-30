@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Helados de Yogurth</title>
+</head>
+
+<body>
+
+
+
+    <h1 id="Titulo"></h1>
+    <header>
+        <div id="Header">
+        </div>
+    </header>
+    <center>
+        <button id="btnNuevaVenta" class='btn btn-dark'>Iniciar</button>
+        <hr>
+        <div id="articulos"> </div>
+        <!-- <button id="btnAgregarHelado" class='btn btn-dark' onclick="cargaMenu();">Agregar Helado</button> -->
+        <hr>
+        <button id="btnConfirmarHelado" class='btn btn-dark' onclick="agregaArticulo('001');" disabled>Confirmar Helado</button>
+    </center>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <div id="divToppings" style="display: flex; "></div>
+            </div>
+
+            <div id="mensaje2"></div>
+            <div id="divMenu1"></div>
+            <div id="cuenta">
+                <div id="TotalHelado"></div>
+            </div>
+            <div id="TotalCuenta"></div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="footer">
+        <div id="button"></div>
+        <div id="container">
+            <div id="cont">
+                <div class="footer_center">
+                    <h5>Elaborado por <a href="mailto:alejandrocruzromero@gmail.com"> Alejandro Cruz Romero</a></h5>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

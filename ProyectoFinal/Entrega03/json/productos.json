@@ -1,0 +1,31 @@
+[{
+        "id": "001",
+        "nombre": "Helado",
+        "precio": 20,
+        "img": "https://tblg.k-img.com/resize/640x640c/restaurant/images/Rvw/88924/88924492.jpg?token=38ebe8c&api=v2"
+    },
+    {
+        "id": "002",
+        "nombre": "Agua 355ml",
+        "precio": 10,
+        "img": "https://www.coca-colaentuhogar.com/media/catalog/product/cache/9376f1eb816eda0af02b0c0436fe42c0/9/6/96_ciel-purificada-355-ml-botella-pet-12p_6_1.jpg"
+    },
+    {
+        "id": "003",
+        "nombre": "Coca cola 600ml",
+        "precio": 17,
+        "img": "https://cdn-cosmos.bluesoft.com.br/products/7894900011609/2017-09-01-14-48-02-0300"
+    },
+    {
+        "id": "004",
+        "nombre": "Papas Sabritas 140 gr",
+        "precio": 10,
+        "img": "https://th.bing.com/th/id/R.6cb463b7d7965b0a2c0a2b06c618c5a7?rik=eaemr3T6YhGQJw&pid=ImgRaw&r=0"
+    },
+    {
+        "id": "005",
+        "nombre": "Chicles Bubblies pza",
+        "precio": 1,
+        "img": "https://th.bing.com/th/id/OIP.nDcuaUJM3aqZ4Ya23mi48QAAAA?pid=ImgDet&rs=1"
+    }
+]
