@@ -21,6 +21,25 @@ let importeTotalHelado = 0
 let importeTotalCuenta = 0
 let contenido = document.querySelector("#articulos")
 
+let boton = document.querySelector("#boton")
+boton.addEventListener("click", function() {
+    if (sessionStorage.getItem("theme") == "dark") {
+        lightmode();
+    } else {
+        darkmode();
+    }
+
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (sessionStorage.getItem("theme") == "dark") {
+        darkmode();
+    } else {
+        lightmode();
+    }
+})
+
+
 
 mostrarHTMLArray = (objeto) => {
     let html = "";
@@ -106,11 +125,11 @@ function cargaMenu() {
 
 
 const Toppings = [
-    { id: "A", nombre: "A - Oreo", precio: 5, img: "https://th.bing.com/th/id/R.09909be2163ca6beffffdd06ff44c058?rik=%2bS61ws9K5Dwkaw&pid=ImgRaw&r=0" },
-    { id: "B", nombre: "B - Kitkat", precio: 7, img: "https://th.bing.com/th/id/R.a1d71d6108680faaca4f7883c8137031?rik=5TIGqQkB3xrguQ&pid=ImgRaw&r=0" },
-    { id: "C", nombre: "C - Brownie", precio: 8, img: "https://th.bing.com/th/id/R.3507aff34c4770cac0c515382f9b39fc?rik=w2PwLGjtu3O6Vw&pid=ImgRaw&r=0" },
-    { id: "D", nombre: "D - M&m's", precio: 12, img: "https://th.bing.com/th/id/R.cfe39fc7b32532a4bed3d91bd4da03bf?rik=RSxAIiGS%2fSt9WQ&pid=ImgRaw&r=0" },
-    { id: "X", nombre: "X - Sin Topping", precio: 0, img: "https://imgs.search.brave.com/q5qOVlAbAmr7t8Kjlh6dGXcCNUaByH1XG9qelLgCryg/rs:fit:459:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5H/eXhWV2stQXpNcW5F/V2hmRHNIRHBRSGFI/cCZwaWQ9QXBp" }
+    { id: "A", nombre: "A - Oreo", precio: 5, img: "./images/T01.jpg" },
+    { id: "B", nombre: "B - Kitkat", precio: 7, img: "./images/T02.jpg" },
+    { id: "C", nombre: "C - Brownie", precio: 8, img: "./images/T03.jpg" },
+    { id: "D", nombre: "D - M&m's", precio: 12, img: "./images/T04.jpg" },
+    { id: "X", nombre: "X - Sin Topping", precio: 0, img: "./images/T05.jpg" }
 ]
 
 
@@ -377,7 +396,7 @@ function BloqueTotal() {
         btn.innerHTML = "Finalizar Venta";
         btn.id = "btnFinalizar"
         btn.classList = "btn"
-        btn.classList = "btn-dark"
+        btn.classList = "btn-danger"
         btn.onclick = function() {
             FinalizarCompra();
         }
@@ -439,4 +458,24 @@ function FinalizarCompra() {
     iditem = 0;
     idpartida = 0;
 
+}
+
+
+
+function darkmode() {
+    let body = document.querySelector("body")
+    body.style.backgroundColor = "#222222"
+    let parrafos = document.querySelector("#parrafos")
+    parrafos.style.color = "white"
+
+    sessionStorage.setItem("theme", "dark")
+}
+
+function lightmode() {
+    let body = document.querySelector("body")
+    body.style.backgroundColor = "white"
+    let parrafos = document.querySelector("#parrafos")
+    parrafos.style.color = "#222222"
+
+    sessionStorage.setItem("theme", "light")
 }

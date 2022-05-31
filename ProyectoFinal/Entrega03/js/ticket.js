@@ -12,6 +12,24 @@ let linea = (localStorage.getItem(localStorage.key(0)));
 partidas = JSON.parse(linea)
 let lvVenta = partidas[0].idventa
 
+let boton = document.querySelector("#boton")
+boton.addEventListener("click", function() {
+    if (sessionStorage.getItem("theme") == "dark") {
+        lightmode();
+    } else {
+        darkmode();
+    }
+
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (sessionStorage.getItem("theme") == "dark") {
+        darkmode();
+    } else {
+        lightmode();
+    }
+})
+
 
 if (ticket != null) {
     ticket.style = "font-family: monospace;font-size: larger;width: 350px;"
@@ -75,4 +93,24 @@ if (ticket != null) {
         "<p style ='text-align-last: end'>IMPORTE TOTAL:                 $" + lvTotalVenta + ".00" +
         "<br>----------------------------------------</p>" +
         "<center>Gracias Por Su Compra </center>"
+}
+
+
+
+function darkmode() {
+    let body = document.querySelector("body")
+    body.style.backgroundColor = "#222222"
+    let parrafos = document.querySelector("#parrafos")
+    parrafos.style.color = "white"
+
+    sessionStorage.setItem("theme", "dark")
+}
+
+function lightmode() {
+    let body = document.querySelector("body")
+    body.style.backgroundColor = "white"
+    let parrafos = document.querySelector("#parrafos")
+    parrafos.style.color = "#222222"
+
+    sessionStorage.setItem("theme", "light")
 }

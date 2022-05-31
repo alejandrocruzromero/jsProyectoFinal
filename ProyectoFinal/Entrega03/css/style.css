@@ -94,3 +94,8 @@ section {
     margin-bottom: 10px;
     margin-left: 40px;
 }
+
+.btnDark {
+    background: #778899a8;
+    color: initial;
+}
