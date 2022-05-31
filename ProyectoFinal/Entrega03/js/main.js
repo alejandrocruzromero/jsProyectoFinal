@@ -325,7 +325,7 @@ function eliminaTopping(id) {
                 }
             });
             Partidas.splice(index, 1)
-            TotalizaArticulo("001", 0)
+            TotalizaArticulo("001", 20)
 
             swal.fire(
                 'Topping Eliminada',
